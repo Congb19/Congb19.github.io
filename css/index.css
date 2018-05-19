@@ -1,18 +1,38 @@
 body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
-body{font:14px"等线","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
+/*body{font:14px"等线","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}*/
 a{color:#2d374b;text-decoration:none}
-a:hover{color:#cd0200;text-decoration:underline}
-em{font-style:normal}
+a:hover{color:#cd0200;text-decoration:none}
+a:focus{
+    outline: none;
+}
+/*em{font-style:normal}
 li{list-style:none}
 img{border:0;vertical-align:middle}
 table{border-collapse:collapse;borderspacing:0}
-p{word-wrap:break-word}
+p{word-wrap:break-word}*/
 
-#background{
-    width: 100%;
-    height: 100%;
+body{
+    background-image: url("../images/back.jpg");
+    background-repeat: repeat-y; /*y方向重复*/
+    background-size: cover; /*放大到铺满*/
+    background-attachment: fixed; /*固定 不随着屏幕移动*/
+    font-family: 'Open Sans', sans-serif; /*sans-serif 为了保证没这个字体也能换个字体正常显示*/
+    font-size: 18px;
+    font-weight: 300;/*粗细*/
 }
-.amy_crisp{
-    width: 900px;
-    height: 900px;
+.content{
+    padding-right: 0px;
+    padding-left: 0px;
 }
+.content-item{
+    padding-right: 5%;
+    padding-left: 5%;
+    min-height:570px !important;
+}
+.content-item p:last-child {
+    margin-bottom: 0;
+}
+.background.content-item-1 {
+    padding: 60px 65px;
+}
+.tm-logo { margin-bottom: 25px; }
