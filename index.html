@@ -33,8 +33,8 @@
                 <h1 class="text-uppercase">Congb19</h1>
             </div>
             <div class="col-lg-7 col-md-7 content-item content-item-1 background tm-black-translucent-bg">
-                <h2 class="main-title text-center dark-blue-text">.01 Welcome & Contact</h2>
-                <p>My name is <span style="font-family: 等线">林英琮</span> and I'm a student of ZJUT, a lovely web/game developer.<br>A rookie front-end developer of ZJUTJH.(<span style="font-family: 等线">精弘网络</span>)<br>My email: 347006087@qq.com<br>My Blog: <a href="http://congb19.top/">Congb19</a><br>My Github: <a href="https://github.com/Congb19">https://github.com/Congb19</a><br>The class monitor of digital media technology 1702.</p>
+                <h2 class="main-title text-center dark-blue-text">.01 Welcome</h2>
+                <p>My name is <span style="font-family: 等线">林英琮</span> and I'm a student of ZJUT, a lovely web/game developer.<br>A rookie front-end developer of ZJUTJH.(<span style="font-family: 等线">精弘网络</span>)<br>My Blog: <a href="http://congb19.top/">Congb19</a><br>My Github: <a href="https://github.com/Congb19">https://github.com/Congb19</a><br>The class monitor of digital media technology 1702.</p>
             </div>
 
         </section>
@@ -44,8 +44,8 @@
                 <h2 class="main-title text-center dark-blue-text">.02 Education & Prize</h2>
                 <p style="font-family: 等线">我超爱学习的！</p>
                 <p>My major is digital media technology and my professional direction is game development.</p>
-                <p><span style="font-family: 等线">Prizes:<br>ZJUT程序设计迎新赛金奖<br>ZJUT程序设计校赛铜奖<br>……<br>下面的按钮暂时还不能用</span></p>
-                <button type="button" class="btn btn-big pull-right tm-btn-primary">Read More</button>
+                <p><span style="font-family: 等线">Prizes:<br>ZJUT程序设计迎新赛金奖<br>ZJUT程序设计校赛铜奖<br>……</span></p>
+                <button type="button" class="btn btn-big pull-right tm-btn-primary" onclick="showPrize()">Read More</button>
             </div>
             <div class="col-lg-5 col-md-5 col-sm-12 tm-white-translucent-bg tm-services-section-padding tm-box-center">
 
@@ -99,19 +99,62 @@
                 </div>
             </div>
         </section>
+        <section class="col-md-12 content" id="contact">
+            <div class="col-lg-6 col-md-6 content-item tm-content-box tm-black-translucent-bg">
+                <h2 class="contact-title">.04 Contact Info</h2>
+                <p><br></p>
+                <p>
+                    QQ: 347006087<br>
+                    Tel: XXXXXXXXXXX(652071 in ZJUT)<br>
+                    Email: 347006087@qq.com<br><br>
+                    右边submit暂时还不能用 嘿嘿
+                </p>
+            </div>
+            <div class="col-lg-6 col-md-6 content-item tm-content-box tm-white-translucent-bg">
 
+                <form action="#" method="post" name="contact-form" class="contact-form">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                            <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-group contact-field">
+                            <input name="email" type="email" class="form-control" id="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-group contact-field">
+                            <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" required></textarea>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-group margin-b-0">
+                            <button type="submit" id="form-submit" class="btn pull-right btn-contact tm-btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="msgSubmit" class="h3 text-center hidden">Message Submitted!</div>
 
+        </section>
 
 
     </div>
 
 
 
-
-
     <script>
         // Write current year in copyright text.
-        document.getElementsByClassName("tm-current-year").value = new Date().getFullYear();
+        // document.getElementsByClassName("tm-current-year").value = new Date().getFullYear();
+        function showPrize () {
+            alert("2017计算机学院TOP10十佳歌手\n" +
+                "第二十届办公技能大赛一等奖\n" +
+                "第二十七届专业学术竞赛二等奖\n" +
+                "程序设计迎新赛金奖\n" +
+                "程序设计校赛铜奖\n" +
+                "第二十一届办公技能大赛一等奖\n");
+        }
     </script>
 
 </body>
