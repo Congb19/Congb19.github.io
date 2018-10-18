@@ -160,11 +160,10 @@
         }
         function randomBack() {
             var a = Math.random();
-            // if (a >= 0) document.getElementById("body1").style.backgroundImage = url("../images/back2.jpg");
-            var b = getComputedStyle(document.getElementById("body1"), "style").backgroundImage;
-            if (a >= 0) b = url("../images/back2.jpg");
+            if (a >= 0.5) document.getElementById("body1").style.backgroundImage = 'url("images/back2.jpg")';
+            // var b = getComputedStyle(document.getElementById("body1"), "style").backgroundImage;
+            // if (a >= 0) b = url("../images/back2.jpg");
         }
     </script>
-
 </body>
 </html>
