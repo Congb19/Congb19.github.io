@@ -22,6 +22,17 @@ body{
     font-size: 18px;
     font-weight:300;/*粗细*/
 }
+/*#body2{*/
+    /*margin:0;*/
+    /*padding:0;*/
+    /*background-image:url(../images/back.jpg);*/
+    /*background-repeat:repeat-y;!*y方向重复*!*/
+    /*background-size:cover;!*放大到铺满*!*/
+    /*background-attachment: fixed;!*固定 不随着屏幕移动*!*/
+    /*font-family: 'Open Sans', sans-serif;!*sans-serif 为了保证没这个字体也能换个字体正常显示*!*/
+    /*font-size: 18px;*/
+    /*font-weight:300;!*粗细*!*/
+/*}*/
 .tm-logo { margin-bottom: 25px; }
 
 p {

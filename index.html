@@ -24,8 +24,8 @@
 
 
 </head>
-<body>
-    <div class="container">
+<body id="body1" onload="randomBack();">
+    <div class="container" id="body2">
 
         <section class="col-md-12 content" id="home">
             <div class="col-lg-5 col-md-5 content-item tm-white-translucent-bg tm-logo-box">
@@ -130,7 +130,7 @@
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="form-group margin-b-0">
-                            <button type="submit" id="form-submit" class="btn pull-right btn-contact tm-btn-primary">Submit</button>
+                            <button type="submit" id="form-submit" class="btn pull-right btn-contact tm-btn-primary" onclick="randomBack()">Submit</button>
                         </div>
                     </div>
                 </form>
@@ -147,6 +147,9 @@
     <script>
         // Write current year in copyright text.
         // document.getElementsByClassName("tm-current-year").value = new Date().getFullYear();
+        // $(function(){   //一上来就执行
+        //     randomBack();
+        // })
         function showPrize () {
             alert("2017计算机学院TOP10十佳歌手\n" +
                 "第二十届办公技能大赛一等奖\n" +
@@ -154,6 +157,12 @@
                 "程序设计迎新赛金奖\n" +
                 "程序设计校赛铜奖\n" +
                 "第二十一届办公技能大赛一等奖\n");
+        }
+        function randomBack() {
+            var a = Math.random();
+            // if (a >= 0) document.getElementById("body1").style.backgroundImage = url("../images/back2.jpg");
+            var b = getComputedStyle(document.getElementById("body1"), "style").backgroundImage;
+            if (a >= 0) b = url("../images/back2.jpg");
         }
     </script>
 
