@@ -7,7 +7,7 @@
 
     
 
-    <title>归档: 2020/4 | Congb19&#39;s Blog</title>
+    <title>抗疫纪录片混剪《能解答一切的答案》 | Congb19&#39;s Blog</title>
     <meta name="author" content="Congb19" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
@@ -72,7 +72,7 @@
                 <span class="nav-text">标签</span>
             </a>
         
-            <a class="nav-item active" href="/archives">
+            <a class="nav-item" href="/archives">
                 <span class="nav-text">归档</span>
             </a>
         
@@ -88,6 +88,8 @@
     <div id="aside-inner" class="aside-inner">
         <!-- <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"><i class="icon-search-stroke"></i></button><input type="hidden" name="sitesearch" value="http://159.75.85.197"></form> -->
 
+        
+        
         
         
 
@@ -138,86 +140,61 @@
 
         <div id="content" class="content">
             <div id="wrapper" class="wrapper" style="max-width: 800px">
-                
-
-
+                <article class="article" itemscope itemprop="blogPost">
     
-    
-    
-    
-    
-    <section class="archives-wrap">
-    <div class="archive-year-wrap">
-    <a href="/archives/2020/04" class="page-hd">
-        2020/04
-    </a>
-    </div>
-    <ol class="archives">
-    
-
-    <li class="archive-section-item">
+    <header class="article-header">
         
-<article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        <header class="archive-article-header">
-            <a class="archive-article-link" href="/posts/191/">字节跳动前端（游戏业务）一面</a>
-            <span class="archive-article-date">
-                (<a class="article-date" href="/archives/2020/04">
-    
-    <time class="vm" datetime="2020-04-20T08:09:45.000Z" itemprop="datePublished">4/20</time>
-</a>
-)
-            </span>
-        </header>
-    </div>
-</article>
-    </li>
-
-    
-    
-
-    <li class="archive-section-item">
+        <h1 itemprop="name">
+            抗疫纪录片混剪《能解答一切的答案》
+        </h1>
         
-<article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        <header class="archive-article-header">
-            <a class="archive-article-link" href="/posts/184/">画画#1</a>
-            <span class="archive-article-date">
-                (<a class="article-date" href="/archives/2020/04">
+        <div class="article-meta clearfix">
+            <a class="article-date" href="http://159.75.85.197/posts/272/index.html">
     
-    <time class="vm" datetime="2020-04-16T02:30:41.000Z" itemprop="datePublished">4/16</time>
+    <i class="icon-calendar vm"></i>
+    
+    <time class="vm" datetime="2020-07-18T07:14:22.000Z" itemprop="datePublished">2020-07-18</time>
 </a>
-)
-            </span>
-        </header>
-    </div>
-</article>
-    </li>
 
-    
-    
+            
 
-    <li class="archive-section-item">
+        </div>
+    </header>
+    
+    <section class="article-body markdown-body">
         
-<article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        <header class="archive-article-header">
-            <a class="archive-article-link" href="/posts/179/">本站更换灰色蒙版一天</a>
-            <span class="archive-article-date">
-                (<a class="article-date" href="/archives/2020/04">
-    
-    <time class="vm" datetime="2020-04-04T06:08:47.000Z" itemprop="datePublished">4/4</time>
-</a>
-)
-            </span>
-        </header>
-    </div>
+        
+        
+    </section>
 </article>
-    </li>
 
 
-</ol></section>
 
+<a id="pagenext" href="/posts/207/" class="article-next" title="字节一面回顾"><i class="icon-arrow-right"></i></a>
+
+
+<a id="pageprev" href="/posts/273/" class="article-prev" title="Hello Hexo"><i class="icon-arrow-left"></i></a>
+
+
+
+<div class="comments">
+    <div id="comments"></div>
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+    new Gitalk({
+        clientID: "7daf8b4f04e0c4b2ca90",
+        clientSecret: "2f4f3e5f5c73f2e78052a0087f766e78ca7002a9",
+        repo: "congb19-blog",
+        owner: "Congb19",
+        admin: ["Congb19"],
+        id: "f3a126308efc6f2f7e080d07175f7ce9",
+        distractionFreeMode: true,
+        title: "抗疫纪录片混剪《能解答一切的答案》",
+        body: "http://159.75.85.197/posts/272/",
+        labels: []
+    }).render('comments');
+    </script>
+</div>
 
 
 
@@ -285,6 +262,33 @@
         });
     });
     </script>
+    
+        
+<script src="/js/scrollspy.min.js"></script>
+
+        <script type="text/javascript">
+        $(document.body).scrollspy({target: '#aside-inner'});
+
+        $(window).on('resize', function() {
+            var hw = $('#header').width();
+            var ww = $('#wrapper').width();
+            var space = ($(this).width() - hw - ww) / 2 / 2;
+
+            var pageprev = $('#pageprev');
+            var pagenext = $('#pagenext');
+            var avg = (pageprev.width() + pagenext.width()) / 2
+
+            if(space > avg) {
+                var len = space - avg / 2;
+                var styles = {position: 'fixed', top: '50%', marginTop: - (pageprev.width() + pagenext.width()) / 4}
+                pageprev.css($.extend({left: hw + len}, styles));
+                pagenext.css($.extend({right: len}, styles));
+            } else {
+                pageprev.removeAttr('style');
+                pagenext.removeAttr('style');
+            }
+        }).trigger('resize');
+        </script>
     
 
 </body>

@@ -7,10 +7,10 @@
 
     
 
-    <title>Category: art | Congb19&#39;s Blog</title>
+    <title>字节跳动前端（游戏业务）一面 | Congb19&#39;s Blog</title>
     <meta name="author" content="Congb19" />
     <meta name="keywords" content="" />
-    <meta name="description" content="" />
+    <meta name="description" content="第一次面试，直接凉掉，知识空缺还非常大，每个问题深入到第二层第三层就GG了面试官挺温柔，全程像聊天，体验还可以，但问的问题很扎心没想到上来就怼着项目问， js基础css基础html基础一个没问，我后悔死简历里写用过jquery了啊啊啊啊啊  自我介绍  jq和vue的区别  （上面答道 jq 是为了操作真实dom的）那为什么jq操作真实dom性能差  那vue的虚拟dom啥原理呢（没研究过，GG）  jq对真实dom的操作合并一下是不是性能也会变好（对哦，……沉默）  vue的列表渲染v-for" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 
@@ -90,6 +90,8 @@
 
         
         
+        
+        
 
         
         <div class="author-meta">
@@ -138,21 +140,20 @@
 
         <div id="content" class="content">
             <div id="wrapper" class="wrapper" style="max-width: 800px">
-                
-    <article class="article" itemscope itemprop="blogPost">
+                <article class="article" itemscope itemprop="blogPost">
     
     <header class="article-header">
         
         <h1 itemprop="name">
-            <a href="/posts/272/">抗疫纪录片混剪《能解答一切的答案》</a>
+            字节跳动前端（游戏业务）一面
         </h1>
         
         <div class="article-meta clearfix">
-            <a class="article-date" href="http://159.75.85.197/categories/art/index.html">
+            <a class="article-date" href="http://159.75.85.197/posts/191/index.html">
     
     <i class="icon-calendar vm"></i>
     
-    <time class="vm" datetime="2020-07-18T07:14:22.000Z" itemprop="datePublished">2020-07-18</time>
+    <time class="vm" datetime="2020-04-20T08:09:45.000Z" itemprop="datePublished">2020-04-20</time>
 </a>
 
             
@@ -162,51 +163,76 @@
     
     <section class="article-body markdown-body">
         
-        
+        <p>第一次面试，直接凉掉，知识空缺还非常大，每个问题深入到第二层第三层就GG了<br>面试官挺温柔，全程像聊天，体验还可以，但问的问题很扎心</p>
+<span id="more"></span>
+
+<p>没想到上来就怼着项目问， js基础css基础html基础一个没问，我后悔死简历里写用过jquery了啊啊啊啊啊</p>
+<ul>
+<li>  自我介绍</li>
+<li>  jq和vue的区别</li>
+<li>  （上面答道 jq 是为了操作真实dom的）那为什么jq操作真实dom性能差</li>
+<li>  那vue的虚拟dom啥原理呢（没研究过，GG）</li>
+<li>  jq对真实dom的操作合并一下是不是性能也会变好（对哦，……沉默）</li>
+<li>  vue的列表渲染v-for为什么要一个key来标注数据</li>
+<li>  （上面答道可能数据渲染顺序有问题）那如果数据顺序本身对的话不就也不会乱了么，为啥（GG）</li>
+<li>  那你用jq主要是用ajax对吧，有哪些请求呢</li>
+<li>  那get和post有什么区别呢（答了几个小点，不是很全）</li>
+<li>  （忘记怎么说到loading了）loading怎么实现呢（我顺便答了一下我的迎新项目里loading组件的实现和用法以及用的不好的地方 ）</li>
+<li>  你说到你用await等待一个ajax请求，具体点（答了一下promise会resolved或rejected，成功继续执行的话会关闭loading组件）</li>
+<li>  那如果reject了怎么办呢（ 我就答了一下会一直loading卡住，用 try catch 包起来可以防止卡住）</li>
+<li>  事件监听流程</li>
+<li>  点击了一个div发生了什么（答的有点模糊）</li>
+<li>  jq的on事件监听和onclick区别（没研究过，GG）</li>
+<li>  跨域了解多少（说了一下iframe之间的跨域，但是没需求就没用过，小G）</li>
+<li>  发送一个http请求发生了什么事情</li>
+<li>  （上面说到TCP），说下TCP连接的建立过程</li>
+<li>  和TCP的同级的一个协议叫啥，和TCP什么区别</li>
+<li>  （上面说到TCP是可靠的）为什么TCP是可靠的，它怎么确保可靠（答的有点模糊，小G）</li>
+<li>  行我们来做题吧</li>
+</ul>
+<p>一、算法题：一道曾经做过的easy题：只出现一次的数字 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/single-number/">https://leetcode-cn.com/problems/single-number/</a><br>给定一个<strong>非空</strong>整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。</p>
+<p><strong>输入:</strong> [4,1,2,1,2]<br><strong>输出:</strong> 4</p>
+<p>当场给出了两个思路：1.排序后遍历，面试官表示能过；2.map存储，key为数值value为出现次数<br>还有啥更好的吗？我说我想想，有提示吗<br>面试官给了【一次遍历即可 】 的提示，可惜我还是没想出来，他说其实能给出map已经可以了。<br>查了以后发现更好的解法是异或就行了</p>
+<p>二、js类设计题：限流程序调度器<br>实现JS限流调度器，方法add接受一个返回Promise的函数，同时执行的任务数量不能超过两个。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Scheduler &#123;</span><br><span class="line">    async add(promiseFunc: () &#x3D;&gt; Promise&lt;void&gt;): Promise&lt;void&gt; &#123;</span><br><span class="line">        &#x2F;&#x2F;添加代码</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">const scheduler &#x3D; new Scheduler();</span><br><span class="line">const timeout &#x3D; (time) &#x3D;&gt; &#123;</span><br><span class="line">return new Promise((r) &#x3D;&gt; setTimeout(r, time));</span><br><span class="line">&#125;;</span><br><span class="line">const addTask &#x3D; (time, order) &#x3D;&gt; &#123;</span><br><span class="line">scheduler.add(() &#x3D;&gt; timeout(time)).then(() &#x3D;&gt; console.log(order));</span><br><span class="line">&#125;;</span><br><span class="line">addTask(1000, 1);</span><br><span class="line">addTask(500, 2);</span><br><span class="line">addTask(300, 3);</span><br><span class="line">addTask(400, 4);</span><br></pre></td></tr></table></figure>
+
+<p>给出想法1：用两个变量timer1和timer2存储当前运行的程序，如果其中有空再加入新的<br>面试官提示说如果一次加入四个程序呢，怎么办，（我说用await让它们等着？），他说那如果一次加入一大堆程序呢，都等着吗，于是我给出想法2：用一个容器存储要运行的程序，等有空了再加入，但是时间来不及+对promise不是很熟，没写出来</p>
+<p>最后有啥要问我的吗？</p>
+<p>1.字节的游戏业务部门主要是做什么的，是游戏产品本身还是周边（官网，活动页啥的）<br>答：我们部门主要是一些游戏开发的支持工具的开发。</p>
+<p>2.看书理解了以后复述不出来怎么办<br>答：多练，多做些小demo尝试，也只能这样了。</p>
+<p>那就到这里吧~</p>
+
         
     </section>
 </article>
 
 
-    <article class="article" itemscope itemprop="blogPost">
-    
-    <header class="article-header">
-        
-        <h1 itemprop="name">
-            <a href="/posts/184/">画画#1</a>
-        </h1>
-        
-        <div class="article-meta clearfix">
-            <a class="article-date" href="http://159.75.85.197/categories/art/index.html">
-    
-    <i class="icon-calendar vm"></i>
-    
-    <time class="vm" datetime="2020-04-16T02:30:41.000Z" itemprop="datePublished">2020-04-16</time>
-</a>
 
-            
+<a id="pagenext" href="/posts/184/" class="article-next" title="画画#1"><i class="icon-arrow-right"></i></a>
 
-        </div>
-    </header>
-    
-    <section class="article-body markdown-body">
-        
-        <p>IPAD到啦，开始画画，先给自己画个头像~就画可爱的鹿乃吧！</p>
-<p><img src="http://www.congb19.top/wordpress/wp-content/uploads/2020/04/IMG_0031-e1587004203775-1024x711.png"></p>
-        
-        <p class="article-more-link">
-            <a href="/posts/184/#more">
-                <span class="vm">阅读更多</span>
-                <i class="icon-arrow-double-right vm"></i>    
-            </a>
-        </p>
-        
-        
-    </section>
-</article>
+
+<a id="pageprev" href="/posts/207/" class="article-prev" title="字节一面回顾"><i class="icon-arrow-left"></i></a>
 
 
 
+<div class="comments">
+    <div id="comments"></div>
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+    new Gitalk({
+        clientID: "7daf8b4f04e0c4b2ca90",
+        clientSecret: "2f4f3e5f5c73f2e78052a0087f766e78ca7002a9",
+        repo: "congb19-blog",
+        owner: "Congb19",
+        admin: ["Congb19"],
+        id: "5dd0af1e1c20a232c1e6335bb1c7dbee",
+        distractionFreeMode: true,
+        title: "字节跳动前端（游戏业务）一面",
+        body: "http://159.75.85.197/posts/191/",
+        labels: []
+    }).render('comments');
+    </script>
+</div>
 
 
 
@@ -274,6 +300,33 @@
         });
     });
     </script>
+    
+        
+<script src="/js/scrollspy.min.js"></script>
+
+        <script type="text/javascript">
+        $(document.body).scrollspy({target: '#aside-inner'});
+
+        $(window).on('resize', function() {
+            var hw = $('#header').width();
+            var ww = $('#wrapper').width();
+            var space = ($(this).width() - hw - ww) / 2 / 2;
+
+            var pageprev = $('#pageprev');
+            var pagenext = $('#pagenext');
+            var avg = (pageprev.width() + pagenext.width()) / 2
+
+            if(space > avg) {
+                var len = space - avg / 2;
+                var styles = {position: 'fixed', top: '50%', marginTop: - (pageprev.width() + pagenext.width()) / 4}
+                pageprev.css($.extend({left: hw + len}, styles));
+                pagenext.css($.extend({right: len}, styles));
+            } else {
+                pageprev.removeAttr('style');
+                pagenext.removeAttr('style');
+            }
+        }).trigger('resize');
+        </script>
     
 
 </body>
