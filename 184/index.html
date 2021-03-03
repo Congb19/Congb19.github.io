@@ -7,10 +7,10 @@
 
     
 
-    <title>CSS的“包裹性”&amp;文本换行问题 | Congb19&#39;s Blog</title>
+    <title>画画#1 | Congb19&#39;s Blog</title>
     <meta name="author" content="Congb19" />
     <meta name="keywords" content="" />
-    <meta name="description" content="最近读《CSS世界》 ，css真是太多太杂了，原理也打破了我原来的一些认知，在这里记录一些点读到内部尺寸与流体特性这一节，读到一段：“ 所谓“自适应性”，指的是元素尺寸由内部元素决定，但永远小于“包含块”容器的尺寸（除非容器尺寸小于元素的“首选最小宽度”）。换句话说就是，“包裹性”元素冥冥中有个max-width:100%罩着的感觉（注意，此说法只是便于大家理解，实际上是有明显区别的）。”“ 因此，对于一个元素，如果其display属性值是inline-block，那么即使其里面内容再多，只要是" />
+    <meta name="description" content="IPAD到啦，开始画画，先给自己画个头像~就画可爱的鹿乃吧！かの~~大好き!!!" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 
@@ -145,15 +145,15 @@
     <header class="article-header">
         
         <h1 itemprop="name">
-            CSS的“包裹性”&amp;文本换行问题
+            画画#1
         </h1>
         
         <div class="article-meta clearfix">
-            <a class="article-date" href="http://159.75.85.197/2020/03/28/css%E7%9A%84%E5%8C%85%E8%A3%B9%E6%80%A7/index.html">
+            <a class="article-date" href="http://159.75.85.197/184/index.html">
     
     <i class="icon-calendar vm"></i>
     
-    <time class="vm" datetime="2020-03-28T08:30:21.000Z" itemprop="datePublished">2020-03-28</time>
+    <time class="vm" datetime="2020-04-16T02:30:41.000Z" itemprop="datePublished">2020-04-16</time>
 </a>
 
             
@@ -163,35 +163,23 @@
     
     <section class="article-body markdown-body">
         
-        <p>最近读《CSS世界》 ，css真是太多太杂了，原理也打破了我原来的一些认知，在这里记录一些点</p>
+        <p>IPAD到啦，开始画画，先给自己画个头像~就画可爱的鹿乃吧！</p>
+<p><img src="http://www.congb19.top/wordpress/wp-content/uploads/2020/04/IMG_0031-e1587004203775-1024x711.png"></p>
 <span id="more"></span>
 
-<p>读到内部尺寸与流体特性这一节，读到一段：</p>
-<blockquote>
-<p>“ 所谓“自适应性”，指的是元素尺寸由内部元素决定，但永远小于“包含块”容器的尺寸（除非容器尺寸小于元素的“首选最小宽度”）。换句话说就是，“包裹性”元素冥冥中有个max-width:100%罩着的感觉（注意，此说法只是便于大家理解，实际上是有明显区别的）。”</p>
-<p>“ 因此，对于一个元素，如果其display属性值是inline-block，那么即使其里面内容再多，只要是正常文本，宽度也不会超过容器。”</p>
-<p>《CSS世界》3.2</p>
-</blockquote>
-<p>想来确实如此，外部为inline内部为block，内部的内容应该超不出去。但是实际测试的时候却长了出去，文本没有换行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.class2 &#123;</span><br><span class="line">box-sizing: border-box;</span><br><span class="line">display: inline-block;</span><br><span class="line">width: 200px;</span><br><span class="line">height: 200px;</span><br><span class="line">padding: 20px;</span><br><span class="line">background-color: red;</span><br><span class="line">&#125;</span><br><span class="line">&lt;div class&#x3D;&quot;class2&quot;&gt;</span><br><span class="line">&lt;span&gt;</span><br><span class="line">hellohellohellohellohellohellohellohellohellohellohellohello</span><br><span class="line">&lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<p>かの~~大好き!!!</p>
+<p><img src="https://www.congb19.top/wordpress/wp-content/uploads/2020/04/QQ%E6%88%AA%E5%9B%BE20200416102725-1024x768.png"></p>
 
-<p><img src="https://www.congb19.top/wordpress/wp-content/uploads/2020/03/QQ%E5%9B%BE%E7%89%8720200328162312.png"></p>
-<p>图1</p>
-<p>后来询问大佬得知，这是由于文本的内容是一段连续的英文字母的原因。只要换成中文或者带空格的英文单词，就能正常换行了。。</p>
-<p><img src="https://www.congb19.top/wordpress/wp-content/uploads/2020/03/QQ%E6%88%AA%E5%9B%BE20200328162544.png"></p>
-<p>图1</p>
-<p>另外还有一种强制换行的办法，即给文本添加CSS3的word-wrap属性，可以达到英文文本强制换行的效果。语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">word-wrap: normalbreak-word;</span><br></pre></td></tr></table></figure>
         
     </section>
 </article>
 
 
 
-<a id="pagenext" href="/2020/03/17/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%A4%8D%E6%B4%BB%E5%95%A6/" class="article-next" title="我的博客复活啦"><i class="icon-arrow-right"></i></a>
+<a id="pagenext" href="/179/" class="article-next" title="本站更换灰色蒙版一天"><i class="icon-arrow-right"></i></a>
 
 
-<a id="pageprev" href="/2020/04/04/%E6%9C%AC%E7%AB%99%E6%9B%B4%E6%8D%A2%E7%81%B0%E8%89%B2%E8%92%99%E7%89%88%E4%B8%80%E5%A4%A9/" class="article-prev" title="本站更换灰色蒙版一天"><i class="icon-arrow-left"></i></a>
+<a id="pageprev" href="/191/" class="article-prev" title="字节跳动前端（游戏业务）一面"><i class="icon-arrow-left"></i></a>
 
 
 
@@ -205,10 +193,10 @@
         repo: "congb19-blog",
         owner: "Congb19",
         admin: ["Congb19"],
-        id: "56faac37993e98e57c04d3257efe504c",
+        id: "6cdd60ea0045eb7a6ec44c54d29ed402",
         distractionFreeMode: true,
-        title: "CSS的“包裹性”&文本换行问题",
-        body: "http://159.75.85.197/2020/03/28/css%E7%9A%84%E5%8C%85%E8%A3%B9%E6%80%A7/",
+        title: "画画#1",
+        body: "http://159.75.85.197/184/",
         labels: []
     }).render('comments');
     </script>
