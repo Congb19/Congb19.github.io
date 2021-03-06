@@ -35,7 +35,6 @@
         font-weight: normal;
         font-style: normal;
     }
-    
     #waifu {
         z-index: 999 !important;
     }
@@ -185,15 +184,14 @@
 <p>《CSS世界》3.2</p>
 </blockquote>
 <p>想来确实如此，外部为inline内部为block，内部的内容应该超不出去。但是实际测试的时候却长了出去，文本没有换行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.class2 &#123;</span><br><span class="line">box-sizing: border-box;</span><br><span class="line">display: inline-block;</span><br><span class="line">width: 200px;</span><br><span class="line">height: 200px;</span><br><span class="line">padding: 20px;</span><br><span class="line">background-color: red;</span><br><span class="line">&#125;</span><br><span class="line">&lt;div class&#x3D;&quot;class2&quot;&gt;</span><br><span class="line">&lt;span&gt;</span><br><span class="line">hellohellohellohellohellohellohellohellohellohellohellohello</span><br><span class="line">&lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.class2</span> &#123;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;class2&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line">    hellohellohellohellohellohellohellohellohellohellohellohello</span><br><span class="line">  <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="https://www.congb19.top/wordpress/wp-content/uploads/2020/03/QQ%E5%9B%BE%E7%89%8720200328162312.png"></p>
-<p>图1</p>
 <p>后来询问大佬得知，这是由于文本的内容是一段连续的英文字母的原因。只要换成中文或者带空格的英文单词，就能正常换行了。。</p>
 <p><img src="https://www.congb19.top/wordpress/wp-content/uploads/2020/03/QQ%E6%88%AA%E5%9B%BE20200328162544.png"></p>
-<p>图1</p>
 <p>另外还有一种强制换行的办法，即给文本添加CSS3的word-wrap属性，可以达到英文文本强制换行的效果。语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">word-wrap: normalbreak-word;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">word-wrap</span>: normalbreak-word;</span><br></pre></td></tr></table></figure>
         
     </section>
 </article>
@@ -232,7 +230,9 @@
         </div>
         <footer class="footer">
     <!-- 备案号 -->
-    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, Theme by <a href="https://github.com/sanonz/hexo-theme-concise" target="_blank">Concise</a>
+    <a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备xxxx号</a>
+    <br/>
+    <!-- Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, Theme by <a href="https://github.com/sanonz/hexo-theme-concise" target="_blank">Concise</a> -->
 
     
 </footer>
