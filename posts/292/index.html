@@ -105,7 +105,7 @@
         
 
         
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Event-Loop"><span class="toc-number">1.</span> <span class="toc-text">1. Event Loop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-vue-watch%E3%80%81computed"><span class="toc-number">2.</span> <span class="toc-text">2. vue-watch、computed</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-vue3-0%E3%80%81vite-%E4%BB%8B%E7%BB%8D"><span class="toc-number">3.</span> <span class="toc-text">3. vue3.0、vite 介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E9%A1%B9%E7%9B%AE%E4%BA%AE%E7%82%B9%E5%92%8C%E9%9A%BE%E7%82%B9%E7%9A%84%E6%80%9D%E8%B7%AF"><span class="toc-number">4.</span> <span class="toc-text">4. 项目亮点和难点的思路</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Event-Loop"><span class="toc-number">1.</span> <span class="toc-text">1. Event Loop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-vue-watch%E3%80%81computed"><span class="toc-number">2.</span> <span class="toc-text">2. vue-watch、computed</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-vue3-0%E3%80%81vite-%E4%BB%8B%E7%BB%8D"><span class="toc-number">3.</span> <span class="toc-text">3. vue3.0、vite 介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#vue-3-0"><span class="toc-number">3.1.</span> <span class="toc-text">vue 3.0</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vite"><span class="toc-number">3.2.</span> <span class="toc-text">vite</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E9%A1%B9%E7%9B%AE%E4%BA%AE%E7%82%B9%E5%92%8C%E9%9A%BE%E7%82%B9%E7%9A%84%E6%80%9D%E8%B7%AF"><span class="toc-number">4.</span> <span class="toc-text">4. 项目亮点和难点的思路</span></a></li></ol>
         
     </div>
 </aside>
@@ -172,9 +172,9 @@
 
 <p>解析：</p>
 <ol>
-<li>执行loop1：<strong>微任务</strong>：无；<strong>宏任务</strong>：执行script（整体），promise1()加入loop2的微任务，setTimeout1()加入loop2的宏任务，setTimeout2加入loop2的宏任务；</li>
-<li>执行loop2：<strong>微任务</strong>：执行promise1()，输出’promise1’；<strong>宏任务</strong>：执行setTimeout1()，输出’setTimeout1’，promise2()加入loop3的微任务，执行setTimeout2()，输出’setTimeout2’；</li>
-<li>执行loop3：<strong>微任务</strong>：执行promise2()，输出’promise2’；<strong>宏任务</strong>：无。<br>输出为：<br>promise1<br>setTimeout1<br>setTimeout2<br>promise2</li>
+<li>执行 loop1：<strong>微任务</strong>：无；<strong>宏任务</strong>：执行 script（整体），promise1()加入 loop2 的微任务，setTimeout1()加入 loop2 的宏任务，setTimeout2 加入 loop2 的宏任务；</li>
+<li>执行 loop2：<strong>微任务</strong>：执行 promise1()，输出’promise1’；<strong>宏任务</strong>：执行 setTimeout1()，输出’setTimeout1’，promise2()加入 loop3 的微任务，执行 setTimeout2()，输出’setTimeout2’；</li>
+<li>执行 loop3：<strong>微任务</strong>：执行 promise2()，输出’promise2’；<strong>宏任务</strong>：无。<br>输出为：<br>promise1<br>setTimeout1<br>setTimeout2<br>promise2</li>
 </ol>
 <blockquote>
 <p>回答：在代码执行的时候，通过将不同函数的执行上下文压入执行栈中，来保证代码的有序执行。在执行同步代码的时候，如果遇到了异步事件，JS 引擎并不会一直等待其返回结果，而是会将这个事件挂起，继续执行执行栈中的其他任务。当异步事件执行完毕后，再将异步事件对应的回调加入到下一次事件循环的对应队列中 去等待执行。<br>任务可以分为宏任务和微任务，<strong>当当前执行栈中的事件执行完毕后，js 引擎会进入下一轮事件循环，先判断微任务队列中是否有任务可以执行，如果有就将微任务队首的事件压入栈中执行。当微任务队列中的任务都执行完成后，再去执行宏任务队列中的任务</strong>。</p>
@@ -184,7 +184,38 @@
 <li>computed 本质是一个惰性求值的观察者，具有缓存性，<strong>只有当依赖变化后，第一次访问 computed 属性，才会计算新的值</strong>。而 <strong>watch 则是当数据发生变化便会调用执行函数</strong>。</li>
 <li>从使用场景上说，<strong>computed 适用一个数据被多个数据影响，而 watch 适用一个数据影响多个数据</strong>。</li>
 </ol>
-<h3 id="3-vue3-0、vite-介绍"><a href="#3-vue3-0、vite-介绍" class="headerlink" title="3. vue3.0、vite 介绍"></a>3. vue3.0、vite 介绍</h3><h3 id="4-项目亮点和难点的思路"><a href="#4-项目亮点和难点的思路" class="headerlink" title="4. 项目亮点和难点的思路"></a>4. 项目亮点和难点的思路</h3>
+<h3 id="3-vue3-0、vite-介绍"><a href="#3-vue3-0、vite-介绍" class="headerlink" title="3. vue3.0、vite 介绍"></a>3. vue3.0、vite 介绍</h3><h4 id="vue-3-0"><a href="#vue-3-0" class="headerlink" title="vue 3.0"></a>vue 3.0</h4><ul>
+<li>特点</li>
+</ul>
+<ol>
+<li>向下兼容，支持大多数 Vue2 的特性。可以拿 Vue2 的语法开发 Vue3。</li>
+<li>性能的提升，打包大小减少 41%，初次渲染快 55%，更新快 133%，内存使用减少 54%。</li>
+<li>新推出的<strong>组合式 API（Composition API）</strong>。在 Vue2 中遇到的问题就是复杂组件的代码变的非常麻烦。Composition API 解决了这个问题，它是一系列 API 的合集。见<a target="_blank" rel="noopener" href="https://v3.cn.vuejs.org/api/composition-api.html">https://v3.cn.vuejs.org/api/composition-api.html</a></li>
+<li>其他新特性：Teleport(瞬移组件)、Suspense(解决异步加载组件问题)和全局 API 的修改和优化。</li>
+<li><strong>更好的 TypeScript 支持</strong></li>
+</ol>
+<ul>
+<li><p>组合式 API</p>
+<ul>
+<li>例子：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- ref声明的数据 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; readersNumber &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;changeReadersNumber&quot;</span>&gt;</span>改变1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- reactive声明的数据 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; people.girl &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;people.changeGirls&quot;</span>&gt;</span>改变2<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- 使用了toRefs API的reactive数据 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; girl &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;changeGirls&quot;</span>&gt;</span>改变3<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="keyword">import</span> &#123; ref, reactive &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">	<span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">		<span class="function"><span class="title">setup</span>(<span class="params"></span>)</span> &#123;</span></span><br><span class="line"><span class="javascript">			<span class="comment">// ref</span></span></span><br><span class="line"><span class="javascript">			<span class="keyword">const</span> readersNumber = ref(<span class="number">0</span>);</span></span><br><span class="line"><span class="javascript">			<span class="comment">// method</span></span></span><br><span class="line"><span class="javascript">			<span class="keyword">const</span> changeReadersNumber = <span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">				girl.value = <span class="string">&#x27;2&#x27;</span>; <span class="comment">//必须加.value</span></span></span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line"><span class="javascript">			<span class="comment">// reactive</span></span></span><br><span class="line"><span class="javascript">			<span class="keyword">const</span> people = reactive(&#123;</span></span><br><span class="line"><span class="javascript">				girl: <span class="string">&#x27;女孩&#x27;</span>,</span></span><br><span class="line"><span class="javascript">				changeGirls: <span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">					people.girl = <span class="string">&#x27;男孩&#x27;</span>;</span></span><br><span class="line">				&#125;,</span><br><span class="line">			&#125;);</span><br><span class="line"></span><br><span class="line"><span class="javascript">			<span class="keyword">return</span> &#123;</span></span><br><span class="line">				readersNumber,</span><br><span class="line">				people,</span><br><span class="line">				...toRefs(people),</span><br><span class="line">			&#125;;</span><br><span class="line">		&#125;,</span><br><span class="line">	&#125;;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>vue2 中声明的变量需要放在 data 中声明使用。而 vue3 中通过 ref 声明变量，并且在 setup 函数中返回出去才可以在页面上使用。vue3 中通过 ref 声明的变量在赋值的时候需要通过变量.value 去进行赋值和读取操作，有点麻烦。通过 reactive 声明变量配合 toRefs API 可以完美解决，见上例。</li>
+<li>vue2 中修改 data 中的变量需要在 methods 中定义方法。然后通过事件触发修改变量。vue3 事件方法不在需要声明在 methods 中了。而是直接写在 setup 函数中或者 reactive 中就可以了。</li>
+</ol>
+<ul>
+<li>其他：<ul>
+<li>Provide/Inject API，可以解决父组件到深层子组件层层传参的麻烦；</li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="vite"><a href="#vite" class="headerlink" title="vite"></a>vite</h4><h3 id="4-项目亮点和难点的思路"><a href="#4-项目亮点和难点的思路" class="headerlink" title="4. 项目亮点和难点的思路"></a>4. 项目亮点和难点的思路</h3><p>项目该怎么答 啊 啊</p>
+
         
     </section>
 </article>
