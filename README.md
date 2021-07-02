@@ -1,5 +1,5 @@
-## Congb19's CV page
+## 啦啦啦
 
-链接：[https://congb19.github.io/](https://congb19.github.io/)
-----
-using bootstrap,webgradients and Font-Awesome.
+表面看起来是一个花里胡哨的页面，但其实没有用了
+
+只是博客的 deploy 仓库（branch-blog）
